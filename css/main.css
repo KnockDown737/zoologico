@@ -455,8 +455,18 @@ form label span{
 }
 
 #erro{
-  color: #082B0D;
+  color: #f80606;
+  justify-items: center;
 }
+
+#eNome, #eEmail, #eFone {
+
+  text-align: left;
+
+
+}
+
+
 /* ANOTAÇÕES
 
 background-color: #f3bc09
