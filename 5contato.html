@@ -14,7 +14,8 @@
 <body>
     
 <!--Isso daqui será um FORM-->
-    <header>ZOOLOGICO GREEN WORLD</header>
+    <header>
+        <h1>ZOOLOGICO GREEN WORLD</h1>
 
 
     <nav>
@@ -24,55 +25,25 @@
         <a href="4sobre.html">SOBRE</a> 
         <span>CONTATO</span>
     </nav>
-
+    </header>
     <br>
 
     <h2>Entre em contato</h2>
 
     <form>
 
-            <label for="nome">
-            <input type="text" id="nome" name="nome" required placeholder="DIGITE SEU NOME" maxlength="30"> 
+            <div id="erro"> </div>
+            <label for="nome">Nome <span>obrigatório</span>
+            <input type="text" id="nome" name="nome" required placeholder="DIGITE SEU NOME" min="4" maxlength="30" onsubmit="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O nome não é válido`"> 
             </label>
 
-            <label for="email">
-            <input type="email" id="email" name="email" required placeholder="DIGITE SEU E-MAIL" maxlength="30">
+            <label for="email">E-mail <span>obrigatório</span>
+            <input type="email" id="email" name="email" required placeholder="DIGITE SEU E-MAIL" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O e-mail não é válido`">
             </label>
 
-            <label for="telefone">
-            <input type="tel" id="telefone" name="celular" placeholder="TELEFONE: (12) 12345-6789" maxlength="30"> 
+            <label for="telefone">Telefone
+            <input type="tel" id="telefone" name="celular" placeholder="TELEFONE: (12) 12345-6789" maxlength="11" pattern="[0-9]*" title="Digite apenas números" onchange="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O telefone não é válido`"> 
             </label>
-
-            <!-- <label for="estado">Estado
-                <select name="estado" id="estado">
-                    <option>Selecione</option>
-                    <option>São Paulo</option>
-                    <option>Minas Gerais</option>
-                    <option>Acre</option>
-                    <option>Mato Grosso</option>
-                    <option>Santa Catarina</option>
-                    <option>Bahia</option>
-                    <option>Pernambuco</option>
-                    <option>Rio de Janeiro</option>
-                    <option>Tocantins</option>
-                    <option>Ceará</option>
-                </select>
-            </label>
-
-            <label for="cidade">Cidade
-                <select name="cidade" id="cidade">
-                    <option>Selecione</option>
-                    <option>Bertioga</option>
-                    <option>Cubatão</option>
-                    <option>Guarujá</option>
-                    <option>Itanhaém</option>
-                    <option>Mongaguá</option>
-                    <option>Peruíbe</option>
-                    <option>Praia Grande</option>
-                    <option>Santos</option>
-                    <option>São Vicente</option>
-                </select>
-            </label> -->
 
         <label for="mensagem"><br><strong>Mensagem</strong><br>
         <br>
@@ -83,8 +54,6 @@
 
 
     </form>
-
-
 
 </body>
 </html>

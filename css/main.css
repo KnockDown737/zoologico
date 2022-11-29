@@ -56,7 +56,7 @@ nav {
   color: #fff;
 }
 
-nav a:hover{
+nav a:hover, nav a:focus-visible{
   transition: .2s;
   background-color: #FFF;
   color: #2F6416;
@@ -104,6 +104,13 @@ nav a:hover{
   width: 15px;
   z-index: 10;
   justify-items: center;
+}
+
+.slider label:hover, .slider label:focus-visible{
+  background-color: #fff;
+  border-radius: 10px;
+  border: #F7F5F1 solid 2px;
+
 }
 
 .slider li:nth-child(1) label {
@@ -419,7 +426,7 @@ form label{
 
 }
 
-#enviar:hover{ /*botao com cor invertida*/
+#enviar:hover, #enviar:focus-visible{ /*botao com cor invertida*/
   color: #326D17;
   background-color: #DEDEDE;
   border: solid 5px;
@@ -442,6 +449,14 @@ textarea{
 
 }
 
+
+form label span{
+  font-size: smaller;
+}
+
+#erro{
+  color: #082B0D;
+}
 /* ANOTAÇÕES
 
 background-color: #f3bc09
