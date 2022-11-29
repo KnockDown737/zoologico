@@ -34,11 +34,11 @@
 
             <div id="erro"> </div>
             <label for="nome">Nome <span>obrigatório</span>
-            <input type="text" id="nome" name="nome" required placeholder="DIGITE SEU NOME" min="4" maxlength="30" onsubmit="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O nome não é válido`"> 
+            <input type="text" id="nome" name="nome" required="required" placeholder="DIGITE SEU NOME" min="4" maxlength="30" onsubmit="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O nome não é válido`"> 
             </label>
 
             <label for="email">E-mail <span>obrigatório</span>
-            <input type="email" id="email" name="email" required placeholder="DIGITE SEU E-MAIL" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O e-mail não é válido`">
+            <input type="email" id="email" name="email" required="required" placeholder="DIGITE SEU E-MAIL" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#erro').textContent += `O e-mail não é válido`">
             </label>
 
             <label for="telefone">Telefone
