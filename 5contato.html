@@ -32,17 +32,21 @@
 
     <form>
 
-            <div id="erro"> </div>
+            <div id="erro">
+                <span id="eNome"></span>
+                <span id="eEmail"></span>
+                <span id="eFone"></span> 
+            </div>
             <label for="nome">Nome <span>obrigatório</span>
-            <input type="text" id="nome" name="nome" required="required" placeholder="DIGITE SEU NOME" min="4" maxlength="30" onsubmit="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O nome não é válido`"> 
+            <input type="text" id="nome" name="nome" required="required" placeholder="DIGITE SEU NOME" minlength="4" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#eNome').innerHTML = `<br> O nome não é válido`;else(document.querySelector('#eNome').innerHTML = ``)"> 
             </label>
 
             <label for="email">E-mail <span>obrigatório</span>
-            <input type="email" id="email" name="email" required="required" placeholder="DIGITE SEU E-MAIL" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#erro').textContent += `O e-mail não é válido`">
+            <input type="email" id="email" name="email" required="required" placeholder="DIGITE SEU E-MAIL" maxlength="30" onchange="if(!this.validity.valid)document.querySelector('#eEmail').innerHTML = `O e-mail não é válido`;else(document.querySelector('#eEmail').innerHTML = ``)"">
             </label>
 
             <label for="telefone">Telefone
-            <input type="tel" id="telefone" name="celular" placeholder="TELEFONE: (12) 12345-6789" maxlength="11" pattern="[0-9]*" title="Digite apenas números" onchange="if(!this.validity.valid)document.querySelector('#erro').innerHTML += `<br> O telefone não é válido`"> 
+            <input type="tel" id="telefone" name="celular" placeholder="TELEFONE: (12) 12345-6789" maxlength="11" pattern="[0-9]*" title="Digite apenas números" onchange="if(!this.validity.valid)document.querySelector('#eFone').innerHTML = `<br> O telefone não é válido`;else(document.querySelector('#eFone').innerHTML = ``)"> 
             </label>
 
         <label for="mensagem"><br><strong>Mensagem</strong><br>
